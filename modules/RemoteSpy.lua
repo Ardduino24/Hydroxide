@@ -140,6 +140,8 @@ for _name, hook in pairs(methodHooks) do
     
                 remote:IncrementCalls(call)
                 remoteDataEvent:Fire(instance, call)
+
+                        print("REMOTE CALLED: " .. instance:GetFullName())
             end
 
             if remote.Blocked or remote:AreArgsBlocked(vargs) then
